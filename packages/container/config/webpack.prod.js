@@ -10,6 +10,8 @@ const prodConfig = {
   mode: "production",
   output: {
     filename: "[name].[contenthash].js",
+    //in S3 bucket I keep all files in container/latest folder, so it will add this prefix to all files
+    publicPath: "/container/latest/",
   },
   plugins: [
     new ModuleFederationPlugin({
